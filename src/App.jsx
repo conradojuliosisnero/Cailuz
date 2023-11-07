@@ -1,11 +1,14 @@
-import './App.css'
+import Nav from "./components/Nav/Nav";
+import Fetching from "./components/Fetching/Fetching";
+// import { ReactDOM } from "react";
 
 function App() {
-
-  return (
-    <>
-    </>
-  )
+	return (
+		<>
+			<Nav />
+			<Fetching />
+		</>
+	);
 }
 
-export default App
+export default App;
