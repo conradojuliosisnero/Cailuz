@@ -1,13 +1,12 @@
-import './nav.css'
+import "./nav.css";
 
 function Nav() {
-	// opciones del nav 
+	// opciones del nav
 	const optionNav = [
 		{ id: 1, link: "Home" },
-		{ id: 2, link: "Products" },
-		{ id: 3, link: "Shop" },
-		{ id: 4, link: "Contact" },
-		{ id: 5, link: "Help" },
+		{ id: 2, link: "Shop" },
+		{ id: 3, link: "Contact" },
+		{ id: 4, link: "Help" },
 	];
 
 	return (

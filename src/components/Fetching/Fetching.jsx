@@ -1,6 +1,7 @@
 import "./fetch.css";
 import { useEffect, useState } from "react";
 import ProductCard from "../Card/ProductCard";
+import Error from '../Error/Error'
 
 function Fetching() {
 	const [data, setData] = useState(null);

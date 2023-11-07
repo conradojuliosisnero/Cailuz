@@ -1,11 +1,11 @@
 .card__container{
-    width: 330px;
+    /* width: 330px; */
     height: 270px;
     display: flex;
     flex-direction: column;
-    border-radius: .7em;
+    border-radius: .4em;
     padding: 5px;
-    background-color: #ffffff;
+    background-color: #3d3d3d;
     box-shadow: 6px 7px 18px -4px rgba(0,0,0,0.54);
     -webkit-box-shadow: 6px 7px 18px -4px rgba(0,0,0,0.54);
     -moz-box-shadow: 6px 7px 18px -4px rgba(0,0,0,0.54);
@@ -27,6 +27,7 @@
 .card__name--price{
     padding: 15px 0px;
     display: flex;
+    color: #ffffff;
     align-items: center;
     justify-content: flex-start;
 }
@@ -34,7 +35,7 @@
 .card__button{
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-around;
 }
 
 .card__button .button{
@@ -47,8 +48,24 @@
     width: 70px;
     cursor: pointer;
     transition: background-color 200ms ease;
+    border: #383838 solid 2px;
 }
 
 .button:hover{
-    background-color: rgb(164, 77, 183);
+    background-color: rgb(164, 164, 164);
+}
+
+.btn__buy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b4158f;
+    border-radius: .4em;
+    width: 170px;
+    height: 3em;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 200ms ease;
+    border: none;
+    outline: none;
 }
