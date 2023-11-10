@@ -1,36 +1,18 @@
-import "./fetch.css";
-import { useEffect, useState } from "react";
 import ProductCard from "../Card/ProductCard";
-import Error from '../Error/Error'
+import Error from "../Error/Error";
+import UseProductFetch from "../../Hooks/UseProductFetch";
+import "./fetch.css";
 
 function Fetching() {
-	const [data, setData] = useState(null);
-	const [error, setError] = useState(null);
-	const [reload, setReload] = useState(null);
+	// url del json server
+	const url = "http://localhost:3001/productos";
 
-	useEffect(() => {
-		ProductFetch();
-	}, []);
+	// hook personalizado de fetch
+	const { data, error } = UseProductFetch(url);
 
-	const ProductFetch = async () => {
-		const APIURL = "http://localhost:3001/productos";
-
-		try {
-			const res = await fetch(APIURL);
-
-			if (res.ok) {
-				const response = await res.json();
-				setData(response);
-				console.log(data);
-			} else {
-				console.error("Ocurrió un error");
-				setError("Hubo un error en la solicitud");
-			}
-		} catch (error) {
-			console.error(error);
-			setError("Hubo un error en la solicitud");
-		}
-	};
+	if (error) {
+		return <Error message={error} />;
+	}
 
 	return (
 		<div className="container">
