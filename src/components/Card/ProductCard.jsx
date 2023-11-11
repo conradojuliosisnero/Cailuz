@@ -1,10 +1,9 @@
 import "./card.css";
 import Carrito from "../../assets/carrito.svg";
 import Share from "../../assets/share.svg";
+import PropTypes from "prop-types";
 
-function ProductCard(props) {
-	const { name, precio, link, img } = props;
-
+function ProductCard({ name, precio, link, img }) {
 	return (
 		<div className="card__container">
 			<div className="car__img">
@@ -28,5 +27,13 @@ function ProductCard(props) {
 		</div>
 	);
 }
+
+// Utiliza propTypes para validar las props del componente
+// ProductCard.propTypes = {
+// 	name: PropTypes.string,
+// 	precio: PropTypes.number,
+// 	link: PropTypes.string,
+// 	img: PropTypes.string,
+// };
 
 export default ProductCard;
